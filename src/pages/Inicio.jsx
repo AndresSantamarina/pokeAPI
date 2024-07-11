@@ -1,4 +1,3 @@
-import React from 'react';
 import PokemonsLista from '../components/PokemonsLista';
 
 const Inicio = () => {

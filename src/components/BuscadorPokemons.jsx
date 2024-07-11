@@ -14,20 +14,13 @@ const BuscadorPokemons = () => {
     dispatch(buscarPokemon(pokemon.toLowerCase()));
   };
 
-  // const handleBuscar = (e) => {
-  //   setPokemon(e.target.value);
-  //   dispatch(buscarPokemon(e.target.value.toLocaleLowerCase()));
-  // };
-
   return (
     <div>
       <form onSubmit={handleBuscar} className="m-3">
-      {/* <form className="m-3"> */}
         <label className="me-2">Nombre del Pokemon</label>
         <input
           type="text"
           onChange={(e) => setPokemon(e.target.value)}
-          // onChange={handleBuscar}
           value={pokemon}
           className="me-2"
         />
@@ -45,11 +38,7 @@ const BuscadorPokemons = () => {
               alt={pokemonObtenido.name}
             />
           )}
-          {/* <p>{pokemonObtenido.abilities[0]}</p>
-            <p>{pokemonObtenido.forms[0]}</p> */}
           <p>Altura: {pokemonObtenido.height}</p>
-          {/* <p>{pokemonObtenido.moves[0]}</p>
-            <p>{pokemonObtenido.species[0]}</p> */}
           <p>Peso: {pokemonObtenido.weight}</p>
         </div>
       )}
